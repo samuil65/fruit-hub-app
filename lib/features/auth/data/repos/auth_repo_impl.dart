@@ -12,7 +12,7 @@ class AuthRepoImpl extends AuthRepo {
   final FirebaseAuthService firebaseAuthService;
   AuthRepoImpl({required this.firebaseAuthService});
 
-  // AuthRepo implementation createUserWithEmailAndPassword
+  // AuthRepo implementation create User With Email And Password
   @override
   Future<Either<Failure, UserEntity>> createUserWithEmailAndPassword({
     required String email,
@@ -35,14 +35,14 @@ class AuthRepoImpl extends AuthRepo {
     }
   }
 
-  // AuthRepo implementation signInWithEmailAndPassword
+  // AuthRepo implementation logIn With Email And Password
   @override
-  Future<Either<Failure, UserEntity>> signInWithEmailAndPassword({
+  Future<Either<Failure, UserEntity>> logInWithEmailAndPassword({
     required String email,
     required String password,
   }) async {
     try {
-      var user = await firebaseAuthService.signInWithEmailAndPassword(
+      var user = await firebaseAuthService.logInWithEmailAndPassword(
         email: email,
         password: password,
       );
@@ -53,6 +53,42 @@ class AuthRepoImpl extends AuthRepo {
       log(
         'Exception in AuthRepoImpl in signInWithEmailAndPassword: ${e.toString()}',
       );
+      return left(ServerFailure('لقد حدث خطأ ما، يرجى المحاولة مرة أخرى'));
+    }
+  }
+
+  // AuthRepo implementation logIn With Google
+  @override
+  Future<Either<Failure, UserEntity>> logInWithGoogle() async {
+    try {
+      var user = await firebaseAuthService.logInWithGoogle();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log('Exception in AuthRepoImpl in signInWithGoogle: ${e.toString()}');
+      return left(ServerFailure('لقد حدث خطأ ما، يرجى المحاولة مرة أخرى'));
+    }
+  }
+
+  // AuthRepo implementation logIn With Facebook
+  @override
+  Future<Either<Failure, UserEntity>> logInWithFacebook() async {
+    try {
+      var user = await firebaseAuthService.logInWithFacebook();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log('Exception in AuthRepoImpl in signInWithGoogle: ${e.toString()}');
+      return left(ServerFailure('لقد حدث خطأ ما، يرجى المحاولة مرة أخرى'));
+    }
+  }
+
+  // AuthRepo implementation logIn With Apple
+  @override
+  Future<Either<Failure, UserEntity>> logInWithApple() async {
+    try {
+      var user = await firebaseAuthService.logInWithApple();
+      return right(UserModel.fromFirebaseUser(user));
+    } catch (e) {
+      log('Exception in AuthRepoImpl in signInWithApple: ${e.toString()}');
       return left(ServerFailure('لقد حدث خطأ ما، يرجى المحاولة مرة أخرى'));
     }
   }

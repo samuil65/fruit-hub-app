@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fruit_hub_app/core/utils/widgets/custom_snack_bar.dart';
 import 'package:fruit_hub_app/features/auth/ui/cubits/signup_cubit/signup_cubit.dart';
-import 'package:fruit_hub_app/features/auth/ui/widgets/signup_view_body.dart';
+import 'package:fruit_hub_app/features/auth/ui/widgets/signup_widgets/signup_view_body.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class SignUpViewBodyBlocConsumer extends StatelessWidget {

@@ -6,7 +6,7 @@ import 'package:fruit_hub_app/core/helper/on_generate_route.dart';
 import 'package:fruit_hub_app/core/services/custom_bloc_observer.dart';
 import 'package:fruit_hub_app/core/services/get_it_service.dart';
 import 'package:fruit_hub_app/core/services/shared_preferences_singleton.dart';
-import 'package:fruit_hub_app/core/utils/app_colors.dart';
+import 'package:fruit_hub_app/core/utils/constants/app_colors.dart';
 import 'package:fruit_hub_app/features/splash/ui/views/splash_view.dart';
 import 'package:fruit_hub_app/firebase_options.dart';
 

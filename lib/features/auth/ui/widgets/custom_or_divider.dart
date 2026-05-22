@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class OrDivider extends StatelessWidget {
-  const OrDivider({super.key});
+class CustomOrDivider extends StatelessWidget {
+  const CustomOrDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

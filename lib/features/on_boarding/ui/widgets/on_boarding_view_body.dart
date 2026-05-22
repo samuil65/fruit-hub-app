@@ -2,7 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_app/constants.dart';
 import 'package:fruit_hub_app/core/services/shared_preferences_singleton.dart';
-import 'package:fruit_hub_app/core/utils/app_colors.dart';
+import 'package:fruit_hub_app/core/utils/constants/app_colors.dart';
 import 'package:fruit_hub_app/core/utils/widgets/custom_button.dart';
 import 'package:fruit_hub_app/features/auth/ui/views/login_view.dart';
 import 'package:fruit_hub_app/features/on_boarding/ui/widgets/on_boarding_page_view.dart';

@@ -15,4 +15,9 @@
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
+    <string name="app_name">Fruit Hub</string>
+    <string name="facebook_app_id">1618963342943475</string>
+    <string name="fb_login_protocol_scheme">fb1618963342943475</string>
+    <string name="facebook_client_token">098929dfa9027447e1407f2d67777a33</string>
+
 </resources>

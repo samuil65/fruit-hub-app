@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub_app/core/utils/app_images.dart';
+import 'package:fruit_hub_app/core/utils/constants/app_images.dart';
 import 'package:fruit_hub_app/features/on_boarding/ui/widgets/page_view_item.dart';
 
 class OnBoardingPageView extends StatelessWidget {
