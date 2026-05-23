@@ -25,9 +25,9 @@ abstract class AuthRepo {
   // Function AuthRepo logIn With Apple
   Future<Either<Failure, UserEntity>> logInWithApple();
 
-  Future addUser({
-    required String uid,
-    required String name,
-    required String email,
-  });
+  // *------------------Firestore Functions------------------*
+  // Function AuthRepo add User Data to Firestore
+  Future addUserData({required UserEntity user});
+  // Function AuthRepo get User Data from Firestore
+  Future<UserEntity> getUserData({required String userId});
 }

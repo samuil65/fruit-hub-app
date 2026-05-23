@@ -156,4 +156,10 @@ class FirebaseAuthService {
       oauthCredential,
     )).user!;
   }
+  // *---------- enf of log In With Apple ----------*
+
+  // Function delete User
+  Future deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+  }
 }
