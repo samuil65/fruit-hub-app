@@ -24,4 +24,10 @@ abstract class AuthRepo {
 
   // Function AuthRepo logIn With Apple
   Future<Either<Failure, UserEntity>> logInWithApple();
+
+  Future addUser({
+    required String uid,
+    required String name,
+    required String email,
+  });
 }

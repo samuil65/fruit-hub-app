@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -109,16 +111,18 @@ class _LoginViewBodyState extends State<LoginViewBody> {
                   context.read<LoginCubit>().logInWithGoogle();
                 },
               ),
-              Gap(16),
+              Gap(5),
               // Sign in with Apple
-              CustomListTile(
-                title: 'تسجيل بواسطة أبل',
-                leadingIcon: Assets.assetsImagesAppleicon,
-                onTap: () {
-                  context.read<LoginCubit>().logInWithApple();
-                },
-              ),
-              Gap(16),
+              Platform.isIOS
+                  ? CustomListTile(
+                      title: 'تسجيل بواسطة أبل',
+                      leadingIcon: Assets.assetsImagesAppleicon,
+                      onTap: () {
+                        context.read<LoginCubit>().logInWithApple();
+                      },
+                    )
+                  : const Gap(5),
+              Gap(5),
               // Sign in with Facebook
               CustomListTile(
                 title: 'تسجيل بواسطة فيسبوك',
