@@ -48,14 +48,9 @@ The project follows:
 - Dart
 - Firebase
 - Bloc / Cubit
-- REST API
 - GetIt
 - Shared Preferences
 
 ---
 
-## 📸 Screenshots
 
-Coming soon...
-
----
